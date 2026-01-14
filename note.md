@@ -1,7 +1,24 @@
-# SSH command
+# Connection refused Window11
 
-## 1. SSH agent
-Khởi chạy **ssh agent** mỗi lần chạy **git bash**
+## 0. Check IP on radxa computer
 ```
-eval "$(ssh-agent -s)"
+hostname -I
+```
+## 1. Check SSH
+```
+sudo apt update
+sudo apt install openssh-server -y
+```
+## 2. Check SSH
+```
+sudo systemctl start ssh
+sudo systemctl enable ssh
+```
+## 3. Check status SSH
+```
+sudo systemctl status ssh
+```
+## 4. Connect to Radxa
+```
+ssh radxa@<radxaIP>
 ```
